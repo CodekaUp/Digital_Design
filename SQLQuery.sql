@@ -3,7 +3,7 @@ SELECT Name, Salary as max_salary
 FROM Employee
 WHERE Salary = (Select MAX(Salary) from Employee);
 
--- 2. Одно число: максимальная длина цепочки руководителей по таблице сотрудников (глубину дерева).
+-- 2. Одно число: максимальная длина цепочки руководителей по таблице сотрудников (глубина дерева).
 WITH depth_tree AS (
   SELECT Id, Chief_Id, 1 AS depth
   FROM Employee
